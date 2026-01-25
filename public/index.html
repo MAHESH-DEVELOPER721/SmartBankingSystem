@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Banking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Page -->
+        <div id="login-page" class="glass-panel page">
+            <h2>Welcome Back</h2>
+            <p>Secure Login</p>
+            <input type="text" id="login-user" placeholder="Username">
+            <input type="password" id="login-pass" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <div class="link" onclick="showPage('register-page')">Create an Account</div>
+        </div>
+
+        <!-- Register Page -->
+        <div id="register-page" class="glass-panel page hidden">
+            <h2>Join Smart Bank</h2>
+            <p>Create a new account</p>
+            <input type="text" id="reg-user" placeholder="Pick a Username">
+            <input type="password" id="reg-pass" placeholder="Set a Password">
+            <button onclick="register()">Register</button>
+            <div class="link" onclick="showPage('login-page')">Already have an account? Login</div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboard-page" class="dashboard-panel page hidden">
+            <div class="left-panel">
+                <div class="card">
+                    <h3>Hello, <span id="user-name">User</span></h3>
+                    <p>Account: <span id="account-num">...</span></p>
+                    <div class="balance-display" id="balance">$0.00</div>
+                    <button onclick="logout()" style="margin-top:20px; background: rgba(255,100,100,0.8); color: white;">Logout</button>
+                </div>
+
+                <div class="card">
+                    <h3>Transfer Money</h3>
+                    <input type="text" id="trans-to" placeholder="Recipient Username">
+                    <input type="number" id="trans-amount" placeholder="Amount">
+                    <button onclick="transfer()">Send Securely</button>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="card">
+                    <h3>Transaction History</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.7;">DSA Fraud Detection Active</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>User</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tx-body">
+                            <!-- JS populates this -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
