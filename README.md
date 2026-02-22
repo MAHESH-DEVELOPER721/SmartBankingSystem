@@ -5,7 +5,7 @@ A secure, full-stack banking application built with **Java (Backend)** and **Van
 ![Preview](https://via.placeholder.com/800x400?text=Smart+Banking+Dashboard+Preview) 
 *(Note: Replace this image link with your actual screenshot after uploading)*
 
-## 🚀 Key Features
+##  Key Features
 
 ### 1. 🛡️ DSA-Powered Fraud Detection
 The core innovation of this project is its usage of algorithms to secure transactions:
@@ -27,7 +27,7 @@ The core innovation of this project is its usage of algorithms to secure transac
 *   **Frontend**: HTML5, CSS3, Vanilla JavaScript.
 *   **Data Structures**: Graphs (Adjacency List), Heaps, HashMaps.
 
-## 📦 How to Run
+##  How to Run
 
 1.  **Compile the Java Backend**:
     Open a terminal in the project folder and run:
@@ -44,6 +44,7 @@ The core innovation of this project is its usage of algorithms to secure transac
     Open your browser and go to:
     [http://localhost:8081/](http://localhost:8081/)
 
-## 🧪 Testing Fraud Scenarios
+##  Testing Fraud Scenarios
 *   **Money Laundering**: Create a chain of transfers $A \to B \to C \to A$. The system will flag this as "High Risk".
 *   **Rapid Transfer**: Perform >5 transactions in 1 minute to trigger the velocity check.
+
